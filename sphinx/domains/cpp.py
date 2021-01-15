@@ -6881,11 +6881,11 @@ class CPPObject(ObjectDescription):
             # Assume we are actually in the old symbol,
             # instead of the newly created duplicate.
             self.env.temp_data['cpp:last_symbol'] = e.symbol
-            msg = __("Duplicate C++ declaration, also defined at %s:%s.\n"
-                     "Declaration is '.. cpp:%s:: %s'.")
-            msg = msg % (e.symbol.docname, e.symbol.line,
-                         self.display_object_type, sig)
-            logger.warning(msg, location=signode)
+            # msg = __("Duplicate C++ declaration, also defined at %s:%s.\n"
+            #          "Declaration is '.. cpp:%s:: %s'.")
+            # msg = msg % (e.symbol.docname, e.symbol.line,
+            #              self.display_object_type, sig)
+            # logger.warning(msg, location=signode)
 
         if ast.objectType == 'enumerator':
             self._add_enumerator_to_parent(ast)
